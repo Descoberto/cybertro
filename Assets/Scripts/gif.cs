@@ -14,7 +14,9 @@ public class gif : MonoBehaviour
     void Update()
     {
         int index = (short)(Time.time * fps) % frames.Length;
+        
         GetComponent<RawImage>().texture = frames[index];
+        
         if (Input.GetKeyDown(KeyCode.P))
         {
             pausa();
