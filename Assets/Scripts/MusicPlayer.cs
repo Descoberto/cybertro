@@ -12,24 +12,24 @@ public class MusicPlayer : MonoBehaviour {
     // Initialization
     void Start ()
     {
-        mpSource = FindObjectOfType<AudioSource>();
-	}
+    	mpSource = FindObjectOfType<AudioSource>();
+    }
 
     // Update 
     void Update ()
     {
-		if (!mpSource.isPlaying)
+	if (!mpSource.isPlaying)
         {
             mpSource.clip = GetRandomClip();
+		
             if (pause == true)
             {
                 mpSource.Pause();
-            }
-            else
-            {
+            } else {
                 mpSource.Play();
             }
         }
+	    
         if (Input.GetKeyDown(KeyCode.P))
         {
             pausa();
@@ -39,7 +39,8 @@ public class MusicPlayer : MonoBehaviour {
     // Get Random Clip
     private AudioClip GetRandomClip()
     {
-        return clips[Random.Range(0, clips.Length)]; //	Execute Random Music
+	// Execute Random Music
+        return clips[Random.Range(0, clips.Length)]; 
     }
 
     //	Pause
@@ -48,11 +49,11 @@ public class MusicPlayer : MonoBehaviour {
         if (pause)
         {
             pause = false;
-
         }
         else
         {
             pause = true;
+		
             mpSource.Pause();
         }
     }
