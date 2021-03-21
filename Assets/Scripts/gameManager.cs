@@ -47,9 +47,11 @@ public class gameManager : MonoBehaviour {
         }
 
         textoscore.text = score.ToString();
+        
         if (score > PlayerPrefs.GetInt("HighScore", 0))
         {
             PlayerPrefs.SetInt("HighScore", score);
+            
             highScore.text = score.ToString();
         }
     }
@@ -58,6 +60,7 @@ public class gameManager : MonoBehaviour {
     public void Reset()
     {
         PlayerPrefs.DeleteAll();
+        
         highScore.text = "0";
     } 
 
@@ -80,11 +83,13 @@ public class gameManager : MonoBehaviour {
         return ((int)posicao.x >= 0 && (int)posicao.x < largura && (int)posicao.y >= 0);
     }
 
+    // Arredonda um número real para um inteiro
     public Vector2 arredonda(Vector2 nA)
     {
         return new Vector2(Mathf.Round(nA.x), Mathf.Round(nA.y));
-    } // Arredonda um número real para um inteiro
+    } 
 
+    // Atualiza a Grade quando sofrer alterações
     public void atualizaGrade(tetroMov pecaTetris)
     {
         for (int y=0; y < altura; y++)
@@ -100,6 +105,7 @@ public class gameManager : MonoBehaviour {
                 }
             }
         }
+        
         foreach (Transform peca in pecaTetris.transform)
         {
             Vector2 posicao = arredonda(peca.position);
@@ -109,7 +115,7 @@ public class gameManager : MonoBehaviour {
                 grade[(int)posicao.x, (int)posicao.y] = peca;
             }
         }
-    } // Atualiza a Grade quando sofrer alterações
+    }
 
     public Transform posicaoTransformGrade(Vector2 posicao)
     {
