@@ -117,6 +117,7 @@ public class gameManager : MonoBehaviour {
         }
     }
 
+    // Pega os valores da posição e verifica se são validos
     public Transform posicaoTransformGrade(Vector2 posicao)
     {
         if (posicao.y > altura - 1)
@@ -127,8 +128,9 @@ public class gameManager : MonoBehaviour {
         {
             return grade[(int)posicao.x, (int)posicao.y];
         }
-    }  // Pega os valores da posição e verifica se são validos
+    }
 
+    // Verifica se a linha está cheia
     public bool linhaCheia(int y)
     {
         for (int x = 0; x < largura; x++)
@@ -139,8 +141,9 @@ public class gameManager : MonoBehaviour {
             }
         }
         return true;
-    } // Verifica se a linha está cheia
+    }
 
+    // Delete the line with the completed squares.
     public void deletaQuadrado (int y)
     {
         for (int x = 0; x < largura; x++)
@@ -149,7 +152,7 @@ public class gameManager : MonoBehaviour {
 
             grade[x, y] = null;
         }
-    } // Delete the line with the completed squares.
+    }
 
     public void moveLinhaBaixo(int y)
     {
