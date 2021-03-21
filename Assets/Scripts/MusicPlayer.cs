@@ -49,9 +49,7 @@ public class MusicPlayer : MonoBehaviour {
         if (pause)
         {
             pause = false;
-        }
-        else
-        {
+        } else {
             pause = true;
 		
             mpSource.Pause();
