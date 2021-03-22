@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -143,7 +143,7 @@ public class gameManager : MonoBehaviour {
         return true;
     }
 
-    // Delete the line with the completed squares.
+    // Delete the line with the completed squares
     public void deletaQuadrado (int y)
     {
         for (int x = 0; x < largura; x++)
@@ -153,7 +153,8 @@ public class gameManager : MonoBehaviour {
             grade[x, y] = null;
         }
     }
-
+    
+    // Move a linha que sobrou para baixo
     public void moveLinhaBaixo(int y)
     {
         for (int x = 0; x < largura; x++)
@@ -166,16 +167,18 @@ public class gameManager : MonoBehaviour {
                 grade[x, y - 1].position += new Vector3(0, -1, 0);
             }
         }
-    } // Move a linha que sobrou para baixo.
-
+    }
+    
+    // Move todas as linhas que sobraram para baixo
     public void moveTodasLinhasBaixo(int y)
     {
         for (int i = y; i < altura; i++)
         {
             moveLinhaBaixo(i);
         }
-    } // Move todas as linhas que sobraram para baixo.
+    }
 
+    // Delete the line
     public void apagaLinha()
     {
         for (int y = 0; y < altura; y++)
@@ -183,14 +186,19 @@ public class gameManager : MonoBehaviour {
             if (linhaCheia(y))
             {
                 deletaQuadrado(y);
+                
                 moveTodasLinhasBaixo(y + 1);
+                
                 y--;
+                
                 score += 100;
+                
                 pontoDificuldade += 100;
             }
         }
-    }  // Delete the line
-
+    }
+    
+    // Verifica se está acima da grade
     public bool acimaGrade(tetroMov pecaTetroMino)
     {
         for (int x = 0; x < largura; x++)
@@ -198,6 +206,7 @@ public class gameManager : MonoBehaviour {
             foreach(Transform quadrado in pecaTetroMino.transform)
             {
                 Vector2 posicao = arredonda(quadrado.position);
+                
                 if (posicao.y > altura - 1)
                 {
                     return true;
@@ -205,10 +214,11 @@ public class gameManager : MonoBehaviour {
             }
         }
         return false;
-    } // Verifica se está acima da grade
-
+    } 
+    
+    // Active GameOver Scene
     public void gameOver()
     {
         SceneManager.LoadScene("gameOver");
-    } // Active GameOver Scene
+    }
 }
