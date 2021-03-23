@@ -254,6 +254,7 @@ public class tetroMov : MonoBehaviour {
     void quedaTime()
     {
         transform.position += new Vector3(0, -1, 0);
+        
         if (posicaoValida())
         {
             gManager.atualizaGrade(this);
@@ -261,6 +262,7 @@ public class tetroMov : MonoBehaviour {
         else
         {
             transform.position += new Vector3(0, 1, 0);
+            
             gManager.apagaLinha();
 
             if (gManager.acimaGrade(this) == posicaoValida())
@@ -269,9 +271,12 @@ public class tetroMov : MonoBehaviour {
             }
 
             PlayLandAudio();
+            
             gManager.score += 10;
             gManager.pontoDificuldade += 10;
+            
             enabled = false;
+            
             gSpawner.proximaPeca();
         }
 
