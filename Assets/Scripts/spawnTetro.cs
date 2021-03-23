@@ -13,6 +13,7 @@ public class spawnTetro : MonoBehaviour {
 	void Start ()
     {
         proxPeca = Random.Range(0, 7);
+		
         proximaPeca();
     }
     
@@ -20,7 +21,9 @@ public class spawnTetro : MonoBehaviour {
     public void proximaPeca()
     {
         Instantiate(criaPecas[proxPeca], transform.position, Quaternion.identity);
+	
         proxPeca = Random.Range(0, 7);
+	
         for (int i = 0; i < mostraPecas.Count; i++)
         {
             mostraPecas[i].SetActive(false);
