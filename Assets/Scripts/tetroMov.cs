@@ -163,17 +163,24 @@ public class tetroMov : MonoBehaviour {
         if (!posicaoValida())
         {
             transform.position += new Vector3(0, 1, 0);
+            
             gManager.atualizaGrade(this);
+            
             gManager.apagaLinha();
+            
             if (gManager.acimaGrade(this))
             {
                 gManager.gameOver();
             }
 
             PlayLandAudio();
+            
             gManager.score += 10;
+            
             gManager.pontoDificuldade += 10;
+            
             enabled = false;
+            
             gSpawner.proximaPeca();
         }
     }
@@ -203,9 +210,11 @@ public class tetroMov : MonoBehaviour {
     public void IrEsquerda()
     {
         timer += Time.deltaTime;
+        
         if (timer > velocidade)
         {
             transform.position += new Vector3(-1, 0, 0);
+            
             timer = 0;
         }
 
@@ -223,9 +232,11 @@ public class tetroMov : MonoBehaviour {
     public void IrBaixo()
     {
         timer += Time.deltaTime;
+        
         if (timer > velocidade)
         {
             transform.position += new Vector3(0, -1, 0);
+            
             timer = 0;
         }
 
@@ -236,16 +247,22 @@ public class tetroMov : MonoBehaviour {
         else
         {
             transform.position += new Vector3(0, 1, 0);
+            
             gManager.apagaLinha();
 
             if (gManager.acimaGrade(this))
             {
                 gManager.gameOver();
             }
+            
             PlayLandAudio();
+            
             gManager.score += 10;
+            
             gManager.pontoDificuldade += 10;
+            
             enabled = false;
+            
             gSpawner.proximaPeca();
         }
     } 
@@ -273,6 +290,7 @@ public class tetroMov : MonoBehaviour {
             PlayLandAudio();
             
             gManager.score += 10;
+            
             gManager.pontoDificuldade += 10;
             
             enabled = false;
