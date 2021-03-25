@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
+// Game Manager Class
 public class gameManager : MonoBehaviour {
 
     // Attribute
