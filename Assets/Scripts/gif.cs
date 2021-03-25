@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Gif Class
 public class gif : MonoBehaviour
 {
     // Attributes 
