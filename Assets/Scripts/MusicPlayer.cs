@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Music Player
 public class MusicPlayer : MonoBehaviour {
 
     // Attributes
