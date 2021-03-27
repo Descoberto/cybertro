@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 /*
- * Tetro Mov class
+ * Tetro Mov
  */
 public class tetroMov : MonoBehaviour {
     
