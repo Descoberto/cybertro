@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
- Spawn Tetro
+// Spawn Tetro
 public class spawnTetro : MonoBehaviour {
 
     // Attributes
