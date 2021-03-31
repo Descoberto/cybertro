@@ -11,7 +11,7 @@ public class gif : MonoBehaviour
     public short fps = 10;
     public bool pause = false;
 
-    // Update Background
+    // Update
     void Update()
     {
         int index = (short)(Time.time * fps) % frames.Length;
