@@ -7,7 +7,7 @@ using System.Collections.Generic;
 // Game Manager
 public class gameManager : MonoBehaviour {
 
-    // Attribute
+    // Attributes
     public static short altura = 20;
     public static short largura = 10;
     public short score = 0;
