@@ -21,6 +21,7 @@ public class spawnTetro : MonoBehaviour {
     // Spawn and active the next piece
     public void proximaPeca()
     {
+	// Create the piece
         Instantiate(criaPecas[proxPeca], transform.position, Quaternion.identity);
 	
         proxPeca = Random.Range(0, 7);
