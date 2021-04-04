@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // Main Menu
-public class MainMenu : MonoBehaviour {
-
+public class MainMenu : MonoBehaviour 
+{
     // Update
     void Update()
     {
@@ -32,5 +32,4 @@ public class MainMenu : MonoBehaviour {
     {
         Application.Quit();
     }
-
 }
