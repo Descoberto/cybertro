@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // Game Over
-public class GameOver : MonoBehaviour {
-
+public class GameOver : MonoBehaviour 
+{
     // Command Update When Press Esc Key
     void Update()
     {
@@ -26,5 +26,4 @@ public class GameOver : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
-
 }
