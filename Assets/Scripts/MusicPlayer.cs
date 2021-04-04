@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Music Player
-public class MusicPlayer : MonoBehaviour {
-
+public class MusicPlayer : MonoBehaviour 
+{
     // Attributes
     public AudioClip[] clips;
     private AudioSource mpSource;
