@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 // Tetro Mov
-public class tetroMov : MonoBehaviour {
-    
+public class tetroMov : MonoBehaviour 
+{
     // Attributes
     public bool podeRodar;
     public bool roda360;
