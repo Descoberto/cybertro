@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 // Spawn Tetro
-public class spawnTetro : MonoBehaviour {
-
+public class spawnTetro : MonoBehaviour 
+{
     // Attributes
     public int proxPeca;
     public Transform[] criaPecas;
