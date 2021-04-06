@@ -5,8 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 // Game Manager
-public class gameManager : MonoBehaviour {
-
+public class gameManager : MonoBehaviour 
+{
     // Attributes
     public static short altura = 20;
     public static short largura = 10;
